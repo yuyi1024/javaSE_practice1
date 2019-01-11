@@ -50,13 +50,7 @@ public class Salmon implements Seafood {
         this.price = price;
     }
 
-    //    public int getPrice(){
-//        return price;
-//    }
-//
-//    public void setPrice(int price){
-//        this.price = price;
-//    }
+
 
     void hello(){
         System.out.println("安安我是鮭魚");

@@ -10,7 +10,7 @@ import java.util.*;
 public class A1 {
     public static void main(String args[]){
         try {
-            String originString = "This is a book. That is a pencil.This is good, and that is bad”.";
+            String originString =  "This is a book. That is a pencil.This is good, and that is bad.";
 
             // 將句子以','和'.'和' '分割
             String splitWordsArray[] = originString.split(",|\\.| ");

@@ -10,23 +10,18 @@ public class B6 {
     public static void main(String args[]){
 
         try {
-
             String plusNumberString1 = "82748022";
-            String plusNumberString2 = "9999999999999999999999593";
-            int plusNumberLength1 = plusNumberString1.length();
-            int plusNumberLength2 = plusNumberString2.length();
+            String plusNumberString2 = "9999999999999999999999593";;
 
             // 若數字1位數 < 數字2位數，交換
-            if(plusNumberLength1 < plusNumberLength2){
-                String tempString = plusNumberString1;
-                int tempLength = plusNumberLength1;
-
+            if(plusNumberString1.length() < plusNumberString2.length()){
+                String temp = plusNumberString1;
                 plusNumberString1 = plusNumberString2;
-                plusNumberLength1 = plusNumberLength2;
-
-                plusNumberString2 = tempString;
-                plusNumberLength2 = tempLength;
+                plusNumberString2 = temp;
             }
+
+            int plusNumberLength1 = plusNumberString1.length();
+            int plusNumberLength2 = plusNumberString2.length();
 
             StringBuffer resultSum = new StringBuffer();
 

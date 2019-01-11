@@ -12,32 +12,36 @@ import com.package1.*;
 public class A2 {
 
     public static void main(String args[]){
-        Salmon salmon = new Salmon(130);
-        SmokedSalmonSushi sushi = new SmokedSalmonSushi(50);
+        try {
+            Salmon salmon = new Salmon(130);
+            SmokedSalmonSushi sushi = new SmokedSalmonSushi(50);
 
-        //public method can be accessed in anywhere
-        String receipt1 = sushi.getReceipt();
+            //public method can be accessed in anywhere
+            String receipt1 = sushi.getReceipt();
 
-        //protected method can be accessed by (same package/not subclass)
-        salmon.taste();
+            //protected method can be accessed by (same package/not subclass)
+            salmon.taste();
 
-        //protected method can't be accessed by (diferent package/not subclass)
-        //sushi.sold(5);
+            //protected method can't be accessed by (diferent package/not subclass)
+            //sushi.sold(5);
 
-        //default method can be accessed by (same package/not subclass)
-        salmon.hello();
+            //default method can be accessed by (same package/not subclass)
+            salmon.hello();
 
-        //default method can't be accessed by (diferent package/subclass)
-        //sushi.hello();
+            //default method can't be accessed by (diferent package/subclass)
+            //sushi.hello();
 
-        //pivate method can only be accessed by same class
-        //String receipt2 = sushi.receipt();
+            //pivate method can only be accessed by same class
+            //String receipt2 = sushi.receipt();
 
-        //sushi inherit the method taste() in parent class Salmon
-        sushi.taste();
+            //sushi inherit the method taste() in parent class Salmon
+            sushi.taste();
 
-        //class Salmon 是 interface Seafood 的實作 class
-        modifySeafoodPrice(new Salmon(), 260);
+            //class Salmon 是 interface Seafood 的實作 class
+            modifySeafoodPrice(salmon, 260);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**

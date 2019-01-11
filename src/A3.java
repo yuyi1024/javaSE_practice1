@@ -11,13 +11,18 @@ import org.apache.logging.log4j.LogManager;
 public class A3 {
 
     public static void main(String args[]){
-        Logger logger = LogManager.getLogger(A3.class);
+        try {
+            Logger logger = LogManager.getLogger("a3_r_2");
 
-        logger.trace("This is trace message!!!");
-        logger.debug("This is debug message!!!");
-        logger.info("This is info message!!!");
-        logger.warn("This is warn message!!!");
-        logger.error("This is error message!!!");
-        logger.fatal("This is fatal message!!!");
+            logger.trace("wwwThis is trace message!!!");
+            logger.debug("This is debug message!!!");
+            logger.info("yyyThis is info message!!!");
+            logger.warn("This is warn message!!!");
+            logger.error("This is error message!!!");
+            logger.fatal("This is fatal message!!!");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
