@@ -14,7 +14,6 @@ public class A1 {
 
             // 將句子以','和'.'和' '分割
             String splitWordsArray[] = originString.split(",|\\.| ");
-//            String splitWordsArra1y = originString.replaceAll(",|\\.", " ");
 
             HashMap<String, Integer> wordAndTimesMap = new HashMap<>();
 
@@ -28,7 +27,7 @@ public class A1 {
                 }
                 // 將 wordsArray 中 的 word 計算次數，並以 {單字 => 次數} 寫進 map 裡
                 if(word.length() > 0){
-                    if(wordAndTimesMap.get(word) == null){
+                    if(wordAndTimesMap.containsKey(word) == false){
                         wordAndTimesMap.put(word, 1);
                     } else{
                         int appearTimes = wordAndTimesMap.get(word) + 1;
@@ -49,6 +48,9 @@ public class A1 {
                     return element1.getValue().compareTo(element2.getValue());
                 }
             });
+
+
+
             System.out.println();
             for(Map.Entry<String, Integer> listElement : wordAndTimeList){
                 System.out.println(listElement.getKey() + "  " + listElement.getValue());

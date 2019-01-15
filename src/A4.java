@@ -26,7 +26,7 @@ public class A4 {
             String outputFilename = args[1];
 
             Properties properties = new Properties();
-            String configFile = "out/production/test/" + inputFilename + ".properties";
+            String configFile = inputFilename + ".properties";
             InputStreamReader input = null;
 
             // 以 UTF8 輸入 properties 檔內容
